@@ -20,18 +20,8 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		// TUTORIAL
-		echo "Kontrollerissa";
-		
 		// REAL
 		$this->load->view('welcome_message');
-		
-		// testmodel.php
-		$data = array();
-		$this->load->model('TestModel');
-		$data['message'] = $this->TestModel->malli_funktio();
-		$this->load->view('testi', $data);
-
 		
 	}
 }
