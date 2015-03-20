@@ -25,7 +25,7 @@ class Welcome extends CI_Controller {
 		
 		// FROM TUTORIAL
 		$data = array();
-		$data[‘message’] = “Viesti”;
-		$this->load->view(‘testi', $data);
+		$data['message'] = "Viesti";
+		$this->load->view('testi', $data);
 	}
 }
