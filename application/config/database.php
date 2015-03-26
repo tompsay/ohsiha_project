@@ -65,11 +65,14 @@ $query_builder = TRUE;
 // Added from tutorial
 $autoload['libraries'] = array(’database’);
 
+// URL of the database
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
+	'hostname' => $url["host"],
+	'username' => $url["user"],
+	'password' => $url["pass"],
 	'database' => '',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
