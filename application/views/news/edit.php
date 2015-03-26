@@ -5,7 +5,7 @@
 <?php echo form_open('news/edit') ?>
 
     <label for="title">Title</label>
-    <input type="input" name="title" value=" <?php echo $news_title ?> " /><br />
+    <input type="input" name="title" value="<?php echo $news_title ?>" /><br />
 
     <label for="text">Text</label>
     <textarea name="text"><?php echo $news_text ?></textarea><br />

@@ -56,6 +56,7 @@ class News_model extends CI_Model {
 				'text' => $this->input->post('text')
 			);
 
+			// Update the db
 			return $this->db->update('news', $data, array('id' => $id));
 		}
 }
