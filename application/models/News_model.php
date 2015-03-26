@@ -18,6 +18,12 @@ class News_model extends CI_Model {
 			return $query->row_array();
 		}
 		
+		public function get_id($id)
+		{
+			$query = $this->db->get_where('news', array('id' => $id));
+			return $query->id;
+		}
+		
 		public function set_news()
 		{
 			$this->load->helper('url');
@@ -31,6 +37,11 @@ class News_model extends CI_Model {
 			);
 
 			return $this->db->insert('news', $data);
+		}
+		
+		public function delete_news($id)
+		{
+			return $this->db->delete('news', array('id' => $id));
 		}
 		
 		public function edit_news($id)
