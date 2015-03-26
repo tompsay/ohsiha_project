@@ -63,7 +63,7 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 // Added from tutorial
-$autoload['libraries'] = array(’database’);
+//$autoload['libraries'] = array(’database’);
 
 // URL of the database
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -74,7 +74,7 @@ $db['default'] = array(
 	'username' => $url["user"],
 	'password' => $url["pass"],
 	'path' => substr($url["path"], 1),
-	'database' => '',
+	'database' => '', // name of the database
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -91,4 +91,4 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 
-$conn = new mysqli($db('hostname'), $db('username'), $db('password'), $db('path'));
+//$conn = new mysqli($db('hostname'), $db('username'), $db('password'), $db('path'));

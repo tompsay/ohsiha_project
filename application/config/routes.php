@@ -55,6 +55,13 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 */ 
-
+/* OLD TUTORIAL 1
 $route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';
+*/
+
+// TUTORIAL 2
+$route['news/(:any)'] = 'news/view/$1';
+$route['news'] = 'news';
+$route['(:any)'] = 'pages/view/$1';
+$route['default_controller'] = 'pages/view';
