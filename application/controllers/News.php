@@ -71,6 +71,7 @@ class News extends CI_Controller {
 		
 		public function edit($id)
 		{
+			// Helpers, libs
 			$this->load->helper('url');
 			$this->load->helper('form');
 			$this->load->library('form_validation');
@@ -80,16 +81,14 @@ class News extends CI_Controller {
 			$editable_news = $this->news_model->get_edit($id);
 			$data['news_title'] = $editable_news['title'];
 			$data['news_text'] = $editable_news['text'];
-			
-			//var_dump($editable_news);
-			
+
 			$this->form_validation->set_rules('title', 'Title', 'required');
 			$this->form_validation->set_rules('text', 'text', 'required');
 			
 			if ($this->form_validation->run() === FALSE)
 			{
 				$this->load->view('templates/header', $data);
-				$this->load->view('news/edit');
+				$this->load->view('news/edit'.$id);
 				$this->load->view('templates/footer');
 
 			}
