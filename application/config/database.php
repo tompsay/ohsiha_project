@@ -73,7 +73,6 @@ $db['default'] = array(
 	'hostname' => $url["host"],
 	'username' => $url["user"],
 	'password' => $url["pass"],
-	//'path' 	=> substr($url["path"], 1),
 	'database' => substr($url["path"], 1), // name of the database
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
