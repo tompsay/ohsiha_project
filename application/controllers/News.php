@@ -76,7 +76,9 @@ class News extends CI_Controller {
 
 			$data['title'] = 'Edit this news item';
 
-			$editable_news['news_item'] = $this->news_model->get_edit($id);
+			$editable_news = $this->news_model->get_edit($id);
+			
+			var_dump($editable_news);
 			
 			$this->form_validation->set_rules('title', 'Title', 'required');
 			$this->form_validation->set_rules('text', 'text', 'required');
