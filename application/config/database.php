@@ -73,6 +73,7 @@ $db['default'] = array(
 	'hostname' => $url["host"],
 	'username' => $url["user"],
 	'password' => $url["pass"],
+	'path' => substr($url["path"], 1),
 	'database' => '',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -89,3 +90,5 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+$conn = new mysqli($db('hostname'), $db('username'), $db('password'), $db('path'));
