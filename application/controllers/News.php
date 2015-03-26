@@ -66,7 +66,7 @@ class News extends CI_Controller {
 				$this->load->helper('url');
 		
 				$this->news_model->delete_news($id);
-				redirect('news/index/', 'refresh');
+				redirect('news/', 'refresh');
 		}
 		
 		public function edit($id = NULL) //parameter???
