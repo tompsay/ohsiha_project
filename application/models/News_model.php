@@ -18,10 +18,9 @@ class News_model extends CI_Model {
 			return $query->row_array();
 		}
 		
-		public function get_id($id)
+		public function get_news($id)
 		{
-			$query = $this->db->get_where('news', array('id' => $id));
-			return $query->id;
+			return $this->db->get_where('news', array('id' => $id));
 		}
 		
 		public function set_news()
@@ -47,7 +46,7 @@ class News_model extends CI_Model {
 		public function edit_news($id)
 		{
 			$this->load->helper('url');
-
+			
 			$slug = url_title($this->input->post('title'), 'dash', TRUE);
 
 			$data = array(
