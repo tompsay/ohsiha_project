@@ -6,6 +6,7 @@
 
         <h1>CodeIgniter Tutorial</h1>
 		
-			<p><a href="/news">News</a></p>
-			<p><a href="../index.php/about">About</a></p>
-			<p><a href="/about">About</a></p>
+			<p><a href="/index.php/news">News</a></p>
+			<p><a href="news">News</a></p>
+			<p><a href="/index.php/about">About</a></p>
+			<p><a href="about">About</a></p>
