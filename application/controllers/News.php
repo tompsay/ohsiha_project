@@ -71,6 +71,7 @@ class News extends CI_Controller {
 		
 		public function edit($id)
 		{
+			$this->load->helper('url');
 			$this->load->helper('form');
 			$this->load->library('form_validation');
 
@@ -88,7 +89,7 @@ class News extends CI_Controller {
 			if ($this->form_validation->run() === FALSE)
 			{
 				$this->load->view('templates/header', $data);
-				$this->load->view('news/edit'); //parameter???
+				$this->load->view('news/edit');
 				$this->load->view('templates/footer');
 
 			}
