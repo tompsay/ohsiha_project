@@ -74,10 +74,9 @@ class News extends CI_Controller {
 			$this->load->helper('form');
 			$this->load->library('form_validation');
 
+			// Data given as parameter
 			$data['title'] = 'Edit this news item';
-
 			$editable_news = $this->news_model->get_edit($id);
-			
 			$data['news_title'] = $editable_news['title'];
 			$data['news_text'] = $editable_news['text'];
 			
