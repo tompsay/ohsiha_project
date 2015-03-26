@@ -76,14 +76,14 @@ class News extends CI_Controller {
 
 			$data['title'] = 'Edit this news item';
 
-			$edit_news = $this->news_model->get_edit($id);
+			$editable_news = $this->news_model->get_edit($id);
 			
 			$this->form_validation->set_rules('title', 'Title', 'required');
 			$this->form_validation->set_rules('text', 'text', 'required');
 			
 			if ($this->form_validation->run() === FALSE)
 			{
-				$this->load->view('templates/header', $data);
+				$this->load->view('templates/header', $data, $editable_news);
 				$this->load->view('news/edit'); //parameter???
 				$this->load->view('templates/footer');
 
@@ -91,7 +91,7 @@ class News extends CI_Controller {
 			else
 			{
 				$this->news_model->edit_news($id);
-				$this->load->view('templates/header', $data);
+				$this->load->view('templates/header', $data, $editable_news);
 				$this->load->view('news/success');
 				$this->load->view('templates/footer');
 			}
