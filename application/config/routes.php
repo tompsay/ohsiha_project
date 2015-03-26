@@ -61,8 +61,8 @@ $route['(:any)'] = 'pages/view/$1';
 */
 
 // TUTORIAL 2 & 3
+$route['news/edit/(:any)'] = 'news/edit/'.$1;
 $route['news/create'] = 'news/create'; //3
-$route['news/edit/(:any)'] = 'news/edit/$1';
 $route['news/(:any)'] = 'news/view/$1';
 $route['news'] = 'news';
 $route['(:any)'] = 'pages/view/$1';
