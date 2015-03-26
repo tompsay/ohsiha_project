@@ -9,7 +9,7 @@
         <p>
 			<a href="news/<?php echo $news_item['slug'] ?>">View article</a>
 			<a href="">Edit</a>
-			anchor('news/delete/'.$news_item['id'], 'delete', array('class'=>'delete', 'onclick'=>"return confirm('Are you sure you want to delete this person?')"));
+			echo anchor('news/delete/'.$news_item['id'], 'delete', array('class'=>'delete', 'onclick'=>"return confirm('Are you sure you want to delete this person?')"));
 		</p>
 
 <?php endforeach ?>
