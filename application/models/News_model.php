@@ -18,7 +18,7 @@ class News_model extends CI_Model {
 			return $query->row_array();
 		}
 		
-		public function get_news($id)
+		public function get_edit($id)
 		{
 			return $this->db->get_where('news', array('id' => $id));
 		}
