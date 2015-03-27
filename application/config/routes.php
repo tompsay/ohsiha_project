@@ -65,5 +65,6 @@ $route['news/edit'] = 'news/edit';
 $route['news/create'] = 'news/create'; //3
 $route['news/(:any)'] = 'news/view/$1';
 $route['news'] = 'news';
+$route['verifylogin'] = 'verifylogin';
 $route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'login';
