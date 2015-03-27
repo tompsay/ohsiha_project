@@ -1,6 +1,11 @@
 <?php
 Class User extends CI_Model
 {
+ public function __construct()
+        {
+			$this->load->database();
+        }
+
  function login($username, $password)
  {
    $this -> db -> select('id, username, pwd');
