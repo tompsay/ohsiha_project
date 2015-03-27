@@ -71,7 +71,7 @@ class News extends CI_Controller {
 		
 		public function edit($id)
 		{
-			var_dump($id);
+			//var_dump($id);
 		
 			// Helpers, libs
 			$this->load->helper('url');
