@@ -83,7 +83,7 @@ class News extends CI_Controller {
 			$editable_news = $this->news_model->get_edit($id);
 			$data['news_title'] = $editable_news['title'];
 			$data['news_text'] = $editable_news['text'];
-			//$data['id'] = $id;
+			$data['id'] = $id;
 
 			$this->form_validation->set_rules('title', 'Title', 'required');
 			$this->form_validation->set_rules('text', 'text', 'required');
