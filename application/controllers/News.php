@@ -91,6 +91,7 @@ class News extends CI_Controller {
 			
 			if ($this->form_validation->run() == FALSE)
 			{
+				echo 'FALSE';
 				$this->load->view('templates/header', $data, $id);
 				$this->load->view('news/edit', $id);
 				$this->load->view('templates/footer');
@@ -98,6 +99,7 @@ class News extends CI_Controller {
 			}
 			else
 			{
+				echo 'TRUE';
 				$this->news_model->edit_news($id);
 				$this->load->view('templates/header', $data);
 				$this->load->view('news/success');
