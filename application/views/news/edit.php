@@ -2,7 +2,7 @@
 
 <?php echo validation_errors(); ?>
 
-<?php echo form_open('news/edit') ?>
+<?php echo form_open('news/edit/'.$id) ?>
 
     <label for="title">Title</label>
     <input type="input" name="title" value="<?php echo $news_title ?>" /><br />
