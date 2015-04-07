@@ -8,6 +8,7 @@ Class User_model extends CI_Model
 
 	public function login($username, $password)
 	{
+		/*
 		$this->db->select('id, username, pwd');
 		$this->db->from('users');
 		$this->db->where('username', $username);
@@ -15,6 +16,8 @@ Class User_model extends CI_Model
 		$this->db->limit(1);
 	 
 		$query = $this->db->get();
+		*/
+		$query = $this->db->get_where('users', array('username' => $username, 'pwd' => $password), 1);
 	 
 		if($query->num_rows() == 1)
 		{
