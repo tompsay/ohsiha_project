@@ -37,6 +37,7 @@ class News extends CI_Controller {
 		
 		public function create()
 		{
+			echo 'CREATE';
 			$this->load->helper('form');
 			$this->load->library('form_validation');
 
