@@ -9,6 +9,7 @@ class Verifylogin extends CI_Controller {
 
  function index()
  {
+	echo "validindex";
    //This method will have the credentials validation
    $this->load->library('form_validation');
 

@@ -37,7 +37,6 @@ class News extends CI_Controller {
 		
 		public function create()
 		{
-			echo 'CREATE';
 			$this->load->helper('form');
 			$this->load->library('form_validation');
 
@@ -72,7 +71,7 @@ class News extends CI_Controller {
 		
 		public function edit($id = NULL)
 		{
-			echo 'id to be edited "' . $id . '"';
+			//echo 'id to be edited "' . $id . '"';
 			//var_dump($id);
 		
 			// Helpers, libs
@@ -89,20 +88,15 @@ class News extends CI_Controller {
 			
 			$this->form_validation->set_rules('title', 'Title', 'required');
 			$this->form_validation->set_rules('text', 'text', 'required');
-			
-			echo 'id to be edited "' . $id . '"';
-			
+
 			if ($this->form_validation->run() === FALSE)
 			{
-				echo 'FALSE';
 				$this->load->view('templates/header', $data);
 				$this->load->view('news/edit', $data);
 				$this->load->view('templates/footer');
-				echo 'id to be edited "' . $id . '"';
 			}
 			else
 			{
-				echo 'TRUE';
 				$this->news_model->edit_news($id);
 				$this->load->view('templates/header', $data);
 				$this->load->view('news/success');
