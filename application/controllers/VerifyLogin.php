@@ -5,7 +5,7 @@ class Verifylogin extends CI_Controller {
 	{
 		parent::__construct();
 		echo "validcon";
-		$this->load->model('user','',TRUE);
+		$this->load->model('user_model','',TRUE);
 	}
 
 	public function index()
@@ -17,7 +17,7 @@ class Verifylogin extends CI_Controller {
 		$this->form_validation->set_rules('username', 'Username', 'trim|required');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required|callback_check_database');
 
-		if($this->form_validation->run() == FALSE)
+		if($this->form_validation->run() === FALSE)
 		{
 			//Field validation failed.  User redirected to login page
 			$this->load->view('login_view');
