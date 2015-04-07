@@ -38,7 +38,7 @@ class Login extends CI_Controller {
 		$username = $this->input->post('username');
 
 		//query the database
-		$result = $this->user->login($username, $password);
+		$result = $this->user_model->login($username, $password);
 
 		if($result)
 		{
