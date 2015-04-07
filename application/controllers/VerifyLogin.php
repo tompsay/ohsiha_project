@@ -1,14 +1,14 @@
 <?php 
 class Verifylogin extends CI_Controller {
 
- function __construct()
+ public function __construct()
  {
 	parent::__construct();
 	echo "validcon";
 	$this->load->model('user','',TRUE);
  }
 
- function index()
+ public function index()
  {
 	echo "validindex";
    //This method will have the credentials validation
@@ -30,7 +30,7 @@ class Verifylogin extends CI_Controller {
 
  }
 
- function check_database($password)
+ public function check_database($password)
  {
    //Field validation succeeded.  Validate against database
    $username = $this->input->post('username');

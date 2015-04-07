@@ -6,7 +6,7 @@ Class User extends CI_Model
 			$this->load->database();
         }
 
- function login($username, $password)
+ public function login($username, $password)
  {
    $this -> db -> select('id, username, pwd');
    $this -> db -> from('users');
