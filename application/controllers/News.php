@@ -96,8 +96,8 @@ class News extends CI_Controller {
 			{
 				echo 'FALSE';
 				$this->load->view('templates/header', $data);
-				$this->load->view('news/edit', $data);
-				$this->load->view('templates/footer', $data);
+				$this->load->view('news/edit/'.$id, $data);
+				$this->load->view('templates/footer');
 				echo 'id to be edited "' . $id . '"';
 			}
 			else
