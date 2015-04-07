@@ -95,11 +95,10 @@ class News extends CI_Controller {
 			if ($this->form_validation->run() == FALSE)
 			{
 				echo 'FALSE';
-				echo 'id to be edited "' . $id . '"';
 				$this->load->view('templates/header', $data, $id);
 				$this->load->view('news/edit', $id);
 				$this->load->view('templates/footer');
-
+				echo 'id to be edited "' . $id . '"';
 			}
 			else
 			{
