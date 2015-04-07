@@ -62,7 +62,7 @@ class News extends CI_Controller {
 			}
 		}
 		
-		public function delete($id)
+		public function delete($id = NULL)
 		{
 				$this->load->helper('url');
 		
@@ -70,7 +70,7 @@ class News extends CI_Controller {
 				redirect('news/', 'refresh');
 		}
 		
-		public function edit($id)
+		public function edit($id = NULL)
 		{
 			echo 'id to be edited "' . $id . '"';
 			//var_dump($id);
