@@ -57,7 +57,6 @@ class News_model extends CI_Model {
 			);
 
 			// Update the db
-			echo 'id to be edited "' . $id . '"';
 			return $this->db->update('news', $data, array('id' => $id));
 		}
 }

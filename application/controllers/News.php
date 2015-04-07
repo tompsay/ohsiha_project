@@ -71,6 +71,7 @@ class News extends CI_Controller {
 		
 		public function edit($id)
 		{
+			echo 'id to be edited "' . $id . '"';
 			//var_dump($id);
 		
 			// Helpers, libs
