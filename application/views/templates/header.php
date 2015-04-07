@@ -4,7 +4,7 @@
     </head>
     <body>
 
-        <h1>CodeIgniter Tutorial</h1>
+        <h1><?php echo $title ?></h1>
 		
 			<p>
 				<a href="/index.php/news">News</a>
