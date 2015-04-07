@@ -61,7 +61,7 @@ $route['(:any)'] = 'pages/view/$1';
 */
 
 // TUTORIAL 2 & 3
-//$route['verifylogin'] = 'verifylogin';
+$route['verifylogin'] = 'verifylogin';
 $route['news/edit'] = 'news/edit';
 $route['news/create'] = 'news/create'; //3
 $route['news/(:any)'] = 'news/view/$1';
