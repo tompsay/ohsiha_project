@@ -104,7 +104,7 @@ class News extends CI_Controller {
 			}
 		}
 		
-		public function show_in_json()
+		public function show_in_json($slug = NULL)
 		{
 			$data['news_item'] = $this->news_model->get_news($slug);
 				
