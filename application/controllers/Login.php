@@ -11,7 +11,6 @@ class Login extends CI_Controller {
 	{
 		$this->load->helper('url');
 		$this->load->helper('form');
-		//$this->load->view('login_view');
 		
 		//This method will have the credentials validation
 		$this->load->library('form_validation');
@@ -87,6 +86,8 @@ class Login extends CI_Controller {
 		{
 			// Add user to database
 			$this->user_model->add_user();
+			
+			
 			
 			//Go to login
 			redirect('login', 'refresh');

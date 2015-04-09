@@ -103,4 +103,20 @@ class News extends CI_Controller {
 				$this->load->view('templates/footer');
 			}
 		}
+		
+		public function show_in_json()
+		{
+			$data['news_item'] = $this->news_model->get_news($slug);
+				
+			if (empty($data['news_item']))
+			{
+				show_404();
+			}
+
+			$data['title'] = $data['news_item']['title'];
+		
+			$this->load->view('templates/header', $data);
+			$this->load->view('news/json_view', $data);
+			$this->load->view('templates/footer');
+		}
 }
