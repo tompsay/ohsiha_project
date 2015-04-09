@@ -6,7 +6,7 @@
 
         <h1>CodeIgniter Tutorial</h1>
 		
-		<h2>Welcome <?php echo $_SESSION['username']; ?>!</h2>
+		<h2>Welcome <?php echo $_SESSION['logged_in']['username']; ?>!</h2>
 		<a href="login/logout">Logout</a>
 		
 		<?php echo var_dump($_SESSION); ?>
