@@ -36,7 +36,7 @@ Class User_model extends CI_Model
 		var_dump($query);
 		var_dump($query->num_rows);
 		
-		if($query->num_rows == 0)
+		if($query->num_rows === NULL)
 		{
 			return FALSE;
 		}
