@@ -94,7 +94,15 @@ class Login extends CI_Controller {
 	{
 		$username = $this->input->post('username');
 		
-		return $this->user_model->username_exists($username);
+		if($this->user_model->username_exists($username))
+		{
+			$this->form_validation->set_message('check_username_taken', 'Username already taken');
+			return FALSE;
+		}
+		else
+		{
+			return TRUE;
+		}
 	}
 	
 	// Checks if the both typed passwords are the same.
@@ -109,6 +117,7 @@ class Login extends CI_Controller {
 		}
 		else
 		{
+			$this->form_validation->set_message('check_retype', 'Passwords don\'t match');
 			return FALSE;
 		}
 	}
