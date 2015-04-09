@@ -6,7 +6,7 @@
 
         <h1>CodeIgniter Tutorial</h1>
 		
-		<h2>Welcome <?php echo $this->session->username; ?>!</h2>
+		<h2>Welcome <?php echo $this->session->sess_array['username']; ?>!</h2>
 		<a href="login/logout">Logout</a>
 		
 			<p>
