@@ -90,7 +90,7 @@ class Login extends CI_Controller {
 			
 			
 			//Go to login
-			redirect('login', 'refresh');
+			//redirect('login', 'refresh');
 		}
 	}
 
