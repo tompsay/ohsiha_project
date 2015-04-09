@@ -25,7 +25,21 @@ Class User_model extends CI_Model
 		}
 		else
 		{
-			return false;
+			return FALSE;
 		}
+	}
+	
+	public function username_exists($username)
+	{
+		$query = $this->db->get_where('users', array('username' => $username));
+		
+		if($query->num_rows > 0)
+		{
+			return TRUE;
+		}
+		else
+		{
+			return FALSE;
+		}		
 	}
 }

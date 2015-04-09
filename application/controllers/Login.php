@@ -55,7 +55,7 @@ class Login extends CI_Controller {
 		else
 		{
 			$this->form_validation->set_message('check_database', 'Invalid username or password');
-			return false;
+			return FALSE;
 		}
 	}
 	
@@ -64,5 +64,52 @@ class Login extends CI_Controller {
 		$this->session->unset_userdata('logged_in');
 		session_destroy();
 		redirect('login', 'refresh');
+	}
+	
+	public function register()
+	{
+		$this->load->helper('url');
+		$this->load->helper('form');
+		
+		//This method will have the credentials validation
+		$this->load->library('form_validation');
+
+		$this->form_validation->set_rules('username', 'Username', 'trim|required|callback_check_username_taken');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required');
+		$this->form_validation->set_rules('repassword', 'Repassword', 'trim|required|callback_check_retype');	
+
+		if($this->form_validation->run() === FALSE)
+		{
+			//Field validation failed.  User redirected to register page
+			$this->load->view('register_view');
+		}
+		else
+		{
+			//Go to login
+			redirect('login', 'refresh');
+		}
+	}
+
+	public function check_username_taken
+	{
+		$username = $this->input->post('username');
+		
+		return $this->user_model->username_exists($username);
+	}
+	
+	// Checks if the both typed passwords are the same.
+	public function check_retype
+	{
+		$password = $this->input->post('password');
+		$repassword = $this->input->post('repassword');
+		
+		if($password === $repassword)
+		{
+			return TRUE;
+		}
+		else
+		{
+			return FALSE;
+		}
 	}
 }
