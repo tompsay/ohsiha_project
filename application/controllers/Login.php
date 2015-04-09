@@ -13,7 +13,6 @@ class Login extends CI_Controller {
 		$this->load->helper('form');
 		//$this->load->view('login_view');
 		
-		echo "validindex";
 		//This method will have the credentials validation
 		$this->load->library('form_validation');
 
