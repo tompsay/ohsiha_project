@@ -59,4 +59,11 @@ class Login extends CI_Controller {
 			return false;
 		}
 	}
+	
+	public function logout()
+	{
+		$this->session->unset_userdata('logged_in');
+		session_destroy();
+		redirect('login', 'refresh');
+	}
 }
