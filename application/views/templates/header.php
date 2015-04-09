@@ -9,7 +9,7 @@
 		<h2>Welcome <?php echo $_SESSION['username']; ?>!</h2>
 		<a href="login/logout">Logout</a>
 		
-		<?php echo vardump($_SESSION); ?>
+		<?php echo var_dump($_SESSION); ?>
 		
 			<p>
 				<a href="/index.php/news">News</a>
