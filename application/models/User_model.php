@@ -34,13 +34,14 @@ Class User_model extends CI_Model
 		$query = $this->db->get_where('users', array('username' => $username));
 		
 		var_dump($query);
+		var_dump($query->num_rows);
 		
 		if($query->num_rows == 0)
 		{
 			return FALSE;
 		}
 		else
-		{
+		{	
 			return TRUE;
 		}		
 	}
