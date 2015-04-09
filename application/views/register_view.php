@@ -14,7 +14,7 @@
      <input type="password" size="20" id="password" name="password"/>
      <br/>
 	 <label for="repassword">Re-type Password:</label>
-     <input type="repassword" size="20" id="repassword" name="repassword"/>
+     <input type="password" size="20" id="repassword" name="repassword"/>
      <br/>
      <input type="submit" value="Register"/>
    </form>

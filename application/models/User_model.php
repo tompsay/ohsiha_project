@@ -42,4 +42,14 @@ Class User_model extends CI_Model
 			return FALSE;
 		}		
 	}
+	
+	public function add_user()
+	{
+		$data = array(
+				'username' => $this->input->post('username'),
+				'pwd' => $this->input->post('password')
+			);
+	
+		$this->db->insert('users', $data);
+	}
 }
