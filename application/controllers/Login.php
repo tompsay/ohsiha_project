@@ -98,7 +98,7 @@ class Login extends CI_Controller {
 	{
 		$username = $this->input->post('username');
 		
-		if($this->user_model->username_exists($username))
+		if($this->user_model->username_exists($username) === TRUE)
 		{
 			$this->form_validation->set_message('check_username_taken', 'Username already taken');
 			return FALSE;
