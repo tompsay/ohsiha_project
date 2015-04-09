@@ -85,12 +85,10 @@ class Login extends CI_Controller {
 		else
 		{
 			// Add user to database
-			//$this->user_model->add_user();
-			
-			
+			$this->user_model->add_user();
 			
 			//Go to login
-			//redirect('login', 'refresh');
+			redirect('login', 'refresh');
 		}
 	}
 
