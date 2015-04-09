@@ -90,7 +90,7 @@ class Login extends CI_Controller {
 		}
 	}
 
-	public function check_username_taken
+	public function check_username_taken()
 	{
 		$username = $this->input->post('username');
 		
@@ -98,7 +98,7 @@ class Login extends CI_Controller {
 	}
 	
 	// Checks if the both typed passwords are the same.
-	public function check_retype
+	public function check_retype()
 	{
 		$password = $this->input->post('password');
 		$repassword = $this->input->post('repassword');
