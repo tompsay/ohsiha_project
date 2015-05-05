@@ -123,8 +123,11 @@ class News extends CI_Controller {
 		public function get_times_news()
 		{
 		
-			echo file_get_contents('http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/1.json?api-key=cb5c634bda4ef7d5d97fbd397289f88b:3A9:3A72015177');
-				
+			echo file_get_contents('http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/1.json?api-key=cb5c634bda4ef7d5d97fbd397289f88b%3A9%3A72015177');
+			
+			$data['news'] = $this->news_model->get_news();
+			$data['title'] = 'News archive';
+			
 			$this->load->view('templates/header', $data);
 			$this->load->view('news/index', $data);
 			$this->load->view('templates/footer');
