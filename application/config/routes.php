@@ -65,6 +65,7 @@ $route['default_controller'] = 'login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'login';
+$route['news/get_times_news'] = 'news/get_times_news';
 $route['news/edit'] = 'news/edit';
 $route['news/create'] = 'news/create'; //3
 $route['news/show_in_json/(:any)'] = 'news/show_in_json/$1'; //
