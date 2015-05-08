@@ -45,7 +45,7 @@ class News_model extends CI_Model {
 			
 			foreach ($news_array as $news) 
 			{			
-				$slug = url_title($news['title', 'dash', TRUE);
+				$slug = url_title($news['title'], 'dash', TRUE);
 			
 				$data = array(
 					'title' => $news['title'],
