@@ -13,6 +13,7 @@
 				<a href="/index.php/news">News</a>
 				<a href="/index.php/news/create">Create News</a>
 				<a href="/index.php/news/get_times_news">Get Some REAL News!</a>
+				<a href="/index.php/news/delete_all">Delete all News</a>
 				<a href="/index.php/about">About</a>
 			</p>
 			
