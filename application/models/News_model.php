@@ -41,7 +41,7 @@ class News_model extends CI_Model {
 		
 		public function set_news_from_array($news_array)
 		{
-			// array has 'title' and 'abstract'
+			// array from New York Times API has 'title' and 'abstract'
 			
 			foreach ($news_array as $news) 
 			{			
