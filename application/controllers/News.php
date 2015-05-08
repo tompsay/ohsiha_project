@@ -72,6 +72,7 @@ class News extends CI_Controller {
 		public function delete_all()
 		{
 			$this->news_model->delete_all_news();
+			redirect('news/', 'refresh');
 		}
 		
 		public function edit($id = NULL)
@@ -130,7 +131,8 @@ class News extends CI_Controller {
 			
 			// data from api is in json
 			// this api gets the most popular news from New York Times
-			$api_data = json_decode(file_get_contents('http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/1.json?api-key=cb5c634bda4ef7d5d97fbd397289f88b%3A9%3A72015177'));
+			// json_decode with parameter true returns an array
+			$api_data = json_decode(file_get_contents('http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/1.json?api-key=cb5c634bda4ef7d5d97fbd397289f88b%3A9%3A72015177'), true);
 
 			// put the data from api to db
 			$this->news_model->set_news_from_array($api_data['results']);
