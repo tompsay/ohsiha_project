@@ -143,7 +143,8 @@ class News extends CI_Controller {
 			echo "{$api_data['num_results']} news were fetched from New York Times!";
 			
 			$this->load->view('templates/header', $data);
-			$this->load->view('news/index', $data);
+			echo "{$api_data['num_results']} news were fetched from New York Times!";
+			//$this->load->view('news/index', $data);
 			$this->load->view('templates/footer');
 		}
 }

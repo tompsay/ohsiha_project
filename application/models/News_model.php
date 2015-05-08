@@ -33,7 +33,8 @@ class News_model extends CI_Model {
 			$data = array(
 				'title' => $this->input->post('title'),
 				'slug' => $slug,
-				'text' => $this->input->post('text')
+				'text' => $this->input->post('text'),
+				'url' => NULL
 			);
 
 			return $this->db->insert('news', $data);
@@ -50,7 +51,8 @@ class News_model extends CI_Model {
 				$data = array(
 					'title' => $news['title'],
 					'slug' => $slug,
-					'text' => $news['abstract']
+					'text' => $news['abstract'],
+					'url' => $news['url']
 				);
 				
 				$this->db->insert('news', $data);
