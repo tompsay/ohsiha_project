@@ -1,10 +1,10 @@
 <html>
     <head>
-        <title>CodeIgniter Tutorial</title>
+        <title>News Service</title>
     </head>
     <body>
 
-        <h1>CodeIgniter Tutorial</h1>
+        <h1>New Service</h1>
 		
 		<h2>Welcome <?php echo $_SESSION['logged_in']['username']; ?>!</h2>
 		<a href="login/logout">Logout</a>
